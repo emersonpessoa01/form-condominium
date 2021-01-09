@@ -10,6 +10,7 @@ yarn add styled-components<br>
 * yarn add vanilla-masker remask<br>
 * yarn add react-hooks-form<br>
 * yarn add yup ou npm install -S yup<br>
+* yarn add react-hook-form
 
 ### Preview:
 (App)[]
