@@ -2,10 +2,19 @@ import React, { useState } from "react";
 import * as St from "./Styles";
 import { mask, unMask } from "remask";
 
+// const initialValue = {
+//   cpf: "",
+//   name: "",
+//   cel: "",
+//   cep: "",
+//   email: "",
+// };
+
 const Form = () => {
   const [valueCpf, setValueCpf] = useState("");
   const [valueCel, setValueCel] = useState("");
   const [valueCep, setValueCep] = useState("");
+  // const [values, setValues] = useState(initialValue);
 
   const handleOnChangeCpf = (evt) => {
     const originalValue = unMask(evt.target.value);
@@ -28,17 +37,29 @@ const Form = () => {
     setValueCep(maskedValue);
   };
 
+  // const handleSave = (evt) => {
+  //   const { name, value } = evt.target;
+  //    console.log({name, value})
+  //   setValues({ ...values, [name]: value });
+  // };
+
+  // console.log(values)
+
+  // const onSubmit=(evt) => {
+  //   evt.preventDefault();
+    
+  // }
+
   return (
     <div>
-      <h1>Cadastro de Condomínio</h1>
+      <St.Title>Cadastro de Condomínio</St.Title>
 
-      <form>
+      <St.Form>
         <>
           <div>
             <St.Label htmlFor="cpf">CPF/CNPJ:</St.Label>
             <St.Input
               autoFocus
-              id="cpf"
               type="text"
               name="cpf"
               placeholder="Digite CPF ou CNPJ"
@@ -50,13 +71,16 @@ const Form = () => {
 
         <div>
           <St.Label htmlFor="name">Nome:</St.Label>
-          <St.Input id="name" type="text" name="name" placeholder="Nome..." />
+          <St.Input
+            type="text"
+            name="name"
+            placeholder="Nome..."
+          />
         </div>
 
         <div>
           <St.Label htmlFor="cel">Celular:</St.Label>
           <St.Input
-            id="cel"
             type="text"
             name="cel"
             placeholder="Celular..."
@@ -68,7 +92,6 @@ const Form = () => {
         <div>
           <St.Label htmlFor="cep">Cep:</St.Label>
           <St.Input
-            id="cep"
             type="text"
             name="cep"
             placeholder="Cep..."
@@ -80,7 +103,6 @@ const Form = () => {
         <div>
           <St.Label htmlFor="email">Email:</St.Label>
           <St.Input
-            id="email"
             type="text"
             name="email"
             placeholder="Email..."
@@ -88,9 +110,9 @@ const Form = () => {
         </div>
 
         <div>
-          <St.Button type="submit">Salvar</St.Button>
+          <button type="submit" >Salvar</button>
         </div>
-      </form>
+      </St.Form>
     </div>
   );
 };

@@ -1,11 +1,11 @@
 import React from "react";
-import * as St from "./components/Styles";
 import Form from "./components/Form";
+import { Main } from "./components/main";
 
 export default function App() {
   return (
-    <St.Layout>
-      <Form />
-    </St.Layout>
+    <Main>
+        <Form />
+    </Main>
   );
 }
