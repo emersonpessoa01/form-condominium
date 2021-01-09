@@ -1,11 +1,17 @@
 import React from "react";
-import Form from "./components/Form";
-import { Main } from "./components/main/Index";
 
-export default function App() {
+import Main from "./components/Main/Main";
+import Form from "./components/Form/Index";
+import Field from "./components/Field/Index";
+
+const App=()=>{
   return (
     <Main>
-        <Form />
+      <Form>
+        <Field.Text label="Email" name="email" type="email" />
+      </Form>
     </Main>
   );
 }
+
+export default App;
