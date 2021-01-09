@@ -10,7 +10,8 @@ yarn add styled-components<br>
 * yarn add vanilla-masker remask<br>
 * yarn add react-hooks-form<br>
 * yarn add yup ou npm install -S yup<br>
-* yarn add react-hook-form
+* yarn add react-hook-form<br>
+*  npm install @hookform/resolvers ou yarn add @hookform/resolvers
 
 ### Preview:
 (App)[]

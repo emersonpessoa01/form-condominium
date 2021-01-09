@@ -1,15 +1,13 @@
 import React from "react";
 
 import Main from "./components/Main/Main";
-import Form from "./components/Form/Index";
-import Field from "./components/Field/Index";
+import FormNew from "./components/FormNew/Index";
+
 
 const App=()=>{
   return (
     <Main>
-      <Form>
-        <Field.Text label="Email" name="email" type="email" />
-      </Form>
+      <FormNew />
     </Main>
   );
 }
