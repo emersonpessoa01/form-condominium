@@ -77,7 +77,7 @@ const FormNew = () => {
         <Input
           autoFocus
           type="text"
-          name="nanme"
+          name="name"
           placeholder="Nome completo"
           ref={register}
         />
