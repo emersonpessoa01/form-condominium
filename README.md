@@ -1,8 +1,8 @@
 ### Install
 <hr>
-* Dentro do VSCode, pressione Ctrl + P e digite:
+Dentro do VSCode, pressione Ctrl + P e digite:<br>
 
-ext install vscode-styled-components
+* ext install vscode-styled-components<br>
 
 Ou<br>
 * No terminal digite:<br>
