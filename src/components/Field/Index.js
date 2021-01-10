@@ -3,11 +3,17 @@ import Content from "./Content/Index";
 import Input from "./Input/Index";
 import Label from "./Label/Index";
 
-const Text = ({ label, type, name, register }) => {
+const Text = ({ label, type, name, register, value, onChange }) => {
   return (
     <Label>
       <Content>{label}</Content>
-      <Input type={type} name={name} ref={register} />
+      <Input
+        name={name}
+        type={type}
+        ref={register}
+        value={value}
+        onChange={onChange}
+      />
     </Label>
   );
 };

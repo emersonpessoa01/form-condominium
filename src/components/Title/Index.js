@@ -1,13 +1,11 @@
 import styled from "styled-components";
 
-const Label = styled.label`
+const Title = styled.h1`
   display: flex;
   flex-direction:column;
-  font-size: 15px;
+  font-size: 20px;
   align-items: center;
-  margin-bottom:5px
-
-
+  margin-bottom:20px;
 `;
 
-export default Label;
+export default Title;

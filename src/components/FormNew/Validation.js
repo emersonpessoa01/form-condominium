@@ -9,6 +9,7 @@ const schema = yup.object().shape({
     .string()
     .email("Digite email válido")
     .required("Email é obrigatório"),
+  
 });
 
 export default schema;

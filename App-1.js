@@ -11,6 +11,7 @@ import Label from "../Field/Label/Index";
 import Input from "../Field/Input/Index";
 import Content from "../Field/Content/Index";
 
+
 const FormNew = () => {
   const [valueCpf, setValueCpf] = useState("");
   const [valueCel, setValueCel] = useState("");
@@ -54,33 +55,16 @@ const FormNew = () => {
 
   const newUser = (user) => {
     console.log(user);
-    alert(JSON.stringify(user))
   };
 
   return (
     <Form onSubmit={handleSubmit(newUser)}>
       <Title>Cadastro de Condomínio</Title>
       <Label>
-        <Content>Nome</Content>
+      <Content>Cpf</Content>
+
         <Input
           autoFocus
-          type="text"
-          name="name"
-          placeholder="Nome completo"
-          ref={register}
-        />
-      </Label>
-      <ValidationStyled>{errors.name?.message}</ValidationStyled> <br />
-
-      <Label>
-        <Content>Email</Content>
-        <Input type="text" name="email" placeholder="Email" ref={register} />
-      </Label>
-      <ValidationStyled>{errors.email?.message}</ValidationStyled>
-
-      <Label>
-        <Content>Cpf/Cnpj</Content>
-        <Input
           type="text"
           name="cpf"
           placeholder="Digite CPF ou CNPJ"
@@ -90,6 +74,19 @@ const FormNew = () => {
         />
         <ValidationStyled>{errors.cpf?.message}</ValidationStyled> <br />
       </Label>
+
+      <Label>
+        <Content>Nome</Content>
+        <Input
+          type="text"
+          name="name"
+          placeholder="Nome completo"
+          ref={register}
+        />
+      </Label>
+      <ValidationStyled>{errors.name?.message}</ValidationStyled> <br />
+
+
       <Label>
         <Content>Celular</Content>
         <Input
@@ -101,6 +98,7 @@ const FormNew = () => {
           ref={register}
         />
       </Label>
+
       <Label>
         <Content>Cep</Content>
         <Input
@@ -112,6 +110,14 @@ const FormNew = () => {
           ref={register}
         />
       </Label>
+
+      <Label>
+        <Content>Email</Content>
+        <Input type="text" name="email" placeholder="Email" ref={register} />
+      </Label>
+      <ValidationStyled>{errors.email?.message}</ValidationStyled>
+
+
       <Button type="submit">Enviar</Button>
     </Form>
   );
