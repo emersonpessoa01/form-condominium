@@ -13,5 +13,5 @@ yarn add styled-components<br>
 * yarn add react-hook-form<br>
 *  npm install @hookform/resolvers ou yarn add @hookform/resolvers
 <hr>
-### Preview:
+### Preview:<br>
 [App](https://form-condominium.netlify.app/)
