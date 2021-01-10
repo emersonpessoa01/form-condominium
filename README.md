@@ -4,7 +4,7 @@
 
 ext install vscode-styled-components
 
-Ou
+Ou<br>
 * No terminal digite:<br>
 yarn add styled-components<br>
 * yarn add vanilla-masker remask<br>

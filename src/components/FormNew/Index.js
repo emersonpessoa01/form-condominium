@@ -41,11 +41,23 @@ const FormNew = () => {
     name: yup
       .string()
       .min(2, "Digite no mínimo 2 caracteres.")
-      .required("Nome é obrigatório"),
+      .required("Nome é obrigatório."),
     email: yup
       .string()
-      .email("Digite email válido")
-      .required("Email é obrigatório"),
+      .email("Digite email válido.")
+      .required("Email é obrigatório."),
+    cpf: yup
+      .string()
+      .min(11, "Digite 11 ou 14 números.")
+      .required("Cpf é obrigatório."),
+    cel: yup
+      .string()
+      .min(11, "Digite 11 números.")
+      .required("Cpf é obrigatório."),
+    cep: yup
+      .string()
+      .min(8, "Digite 8 números.")
+      .required("Cpf é obrigatório."),
   });
 
   const { register, handleSubmit, errors } = useForm({
@@ -65,18 +77,23 @@ const FormNew = () => {
         <Input
           autoFocus
           type="text"
-          name="name"
+          name="nanme"
           placeholder="Nome completo"
           ref={register}
         />
+        <ValidationStyled>{errors.name?.message}</ValidationStyled> <br />
       </Label>
-      <ValidationStyled>{errors.name?.message}</ValidationStyled> <br />
 
       <Label>
         <Content>Email</Content>
-        <Input type="text" name="email" placeholder="Email" ref={register} />
+        <Input
+          type="text"
+          name="email"
+          placeholder="Email"
+          ref={register}
+        />
+        <ValidationStyled>{errors.email?.message}</ValidationStyled> <br />
       </Label>
-      <ValidationStyled>{errors.email?.message}</ValidationStyled>
 
       <Label>
         <Content>Cpf/Cnpj</Content>
@@ -100,7 +117,9 @@ const FormNew = () => {
           onChange={handleOnChangeCel}
           ref={register}
         />
+        <ValidationStyled>{errors.cel?.message}</ValidationStyled> <br />
       </Label>
+
       <Label>
         <Content>Cep</Content>
         <Input
@@ -111,7 +130,9 @@ const FormNew = () => {
           onChange={handleOnChangeCep}
           ref={register}
         />
+        <ValidationStyled>{errors.cep?.message}</ValidationStyled> <br />
       </Label>
+
       <Button type="submit">Enviar</Button>
     </Form>
   );
