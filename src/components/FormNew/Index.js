@@ -53,11 +53,11 @@ const FormNew = () => {
     cel: yup
       .string()
       .min(11, "Digite 11 números.")
-      .required("Cpf é obrigatório."),
+      .required("Cel é obrigatório."),
     cep: yup
       .string()
       .min(8, "Digite 8 números.")
-      .required("Cpf é obrigatório."),
+      .required("Cep é obrigatório."),
   });
 
   const { register, handleSubmit, errors } = useForm({
