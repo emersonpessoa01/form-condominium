@@ -1,4 +1,4 @@
-[form-condominium](https://form-condominium.netlify.app/)
+[form-condominium](https://form-condominium.vercel.app/)
 
 ### Install
 <hr>
